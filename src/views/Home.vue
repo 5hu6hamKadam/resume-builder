@@ -18,7 +18,7 @@
         Create your very own professional Resume and download it within 15
         minutes.
       </p>
-      <router-link :to="{ name: 'Create Resume' }">
+      <router-link :to="{ path: 'create' }">
         <Button label="Create your resume" />
       </router-link>
     </article>
@@ -109,7 +109,9 @@
         With CV maker, you can quickly and easily create a distinctive and
         professional resume within 15 minutes.
       </p>
-      <Button class="p-mb-6" label="Create your Resume" />
+      <router-link :to="{ path: 'create' }">
+        <Button class="p-mb-6" label="Create your Resume" />
+      </router-link>
     </section>
     <section class="p-col-12 p-md-8 p-offset-0 p-md-offset-2 p-py-6">
       <h1>CV (Curriculum Vitae)</h1>

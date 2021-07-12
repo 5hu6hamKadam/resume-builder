@@ -12,8 +12,21 @@ const routes = [
   },
   {
     path: '/create',
-    name: 'Create Resume',
     component: () => import('@/views/CreateResume.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/PersonalDetails.vue'),
+      },
+      {
+        path: '/create/experiences',
+        component: () => import('@/views/Experiences.vue'),
+      },
+      {
+        path: '/create/personal-details',
+        component: () => import('@/views/Templates.vue'),
+      },
+    ],
   },
 ];
 
