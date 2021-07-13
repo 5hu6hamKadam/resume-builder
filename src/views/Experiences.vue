@@ -2,13 +2,19 @@
   <div class="p-fluid p-formgrid p-grid">
     <div class="p-col-12">
       <AccordionWrapper
-        @save="onSave()"
+        @save="onSave($event)"
+        @add="onAdd($event)"
         :iconClass="formComp.iconClass"
         :title="formComp.title"
         v-for="(formComp, index) of FORM_EXPERIENCE_SCHEMA"
         :key="`formComp-${index}`"
+        :isAdd="formComp.isAdd"
+        :name="formComp.name"
       >
-        <FormBuilder :schema="formComp.schemas" v-model="formData" />
+        <FormBuilder
+          :schema="formComp.schemas"
+          v-model="formData[formComp.name]"
+        />
       </AccordionWrapper>
     </div>
   </div>
@@ -17,10 +23,13 @@
 import AccordionWrapper from '@/components/AccordionWrapper.vue';
 import FormBuilder from '@/components/FormBuilder.vue';
 import { FORM_EXPERIENCE_SCHEMA } from '@/constants';
+import { SAVE_FORM, ADD_FORM } from '@/store/mutation.type.js';
+import { mapMutations } from 'vuex';
 export default {
   data() {
+    this.$log.info('Experiences | resume state', this.$store.state.resume);
     return {
-      formData: [],
+      formData: this.$store.state.resume || {},
       formats: ['bold', 'italic', 'underline'],
       FORM_EXPERIENCE_SCHEMA,
     };
@@ -30,9 +39,23 @@ export default {
     AccordionWrapper,
   },
   methods: {
-    onSave() {
-      this.$log.info('PersonalDetails | formData', this.formData);
+    onSave(name) {
+      this.$log.info(
+        'PersonalDetails | Entering formData and name as',
+        this.formData,
+        name
+      );
+      this.saveForm({ formData: this.formData[name], name });
     },
+    onAdd(name) {
+      this.$log.info(
+        'PersonalDetails | Entering with formData and name as',
+        this.formData,
+        name
+      );
+      this.addForm({ formData: this.formData[name], name });
+    },
+    ...mapMutations([SAVE_FORM, ADD_FORM]),
   },
 };
 </script>

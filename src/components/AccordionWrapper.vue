@@ -10,11 +10,18 @@
           <slot></slot>
         </div>
         <div class="p-col-12">
-          <div class="p-d-flex p-jc-between">
+          <div class="p-d-flex">
             <Button
               label="Tips"
               icon="fa fa-lightbulb-o"
-              class="p-button-outlined"
+              class="p-button-outlined p-mr-auto"
+            />
+            <Button
+              v-if="isAdd"
+              label="Add"
+              icon="fa fa-plus"
+              class="p-mx-1"
+              @click="onAdd()"
             />
             <Button label="Save" icon="pi pi-save" @click="onSave()" />
           </div>
@@ -27,7 +34,7 @@
 import Accordion from 'primevue/accordion';
 import AccordionTab from 'primevue/accordiontab';
 export default {
-  props: ['title', 'iconClass'],
+  props: ['title', 'iconClass', 'name', 'isAdd'],
   components: {
     Accordion,
     AccordionTab,
@@ -35,7 +42,11 @@ export default {
   methods: {
     onSave() {
       this.$log.info('AccordionWrapper | Entering');
-      this.$emit('save');
+      this.$emit('save', this.name);
+    },
+    onAdd() {
+      this.$log.info('AccordionWrapper | Entering');
+      this.$emit('add', this.name);
     },
   },
 };

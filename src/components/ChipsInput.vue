@@ -1,7 +1,12 @@
 <template>
   <div :class="['p-field', containerClass]">
     <label :for="id" :class="labelClass">{{ label }}</label>
-    <Chips v-model="valueData" separator="," />
+    <Chips
+      v-model="valueData"
+      separator=","
+      @add="updateData(valueData)"
+      @remove="updateData(valueData)"
+    />
   </div>
 </template>
 <script>
@@ -17,9 +22,11 @@ export default {
       valueData: this.value,
     };
   },
-  updateData(value) {
-    this.$log.info('ChipsInput | Entering with', value);
-    this.$emit('input', value);
+  methods: {
+    updateData(value) {
+      this.$log.info('ChipsInput | Entering with', value);
+      this.$emit('input', value);
+    },
   },
 };
 </script>

@@ -297,6 +297,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Resume objective',
     iconClass: 'fa fa-user p-mr-2',
+    name: 'resumeObjective',
     schemas: [
       {
         name: 'description',
@@ -309,6 +310,8 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Work experience',
     iconClass: 'fa fa-suitcase p-mr-2',
+    name: 'workExperience',
+    isAdd: true,
     schemas: [
       {
         name: 'jobTitle',
@@ -358,6 +361,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Education and Qualifications',
     iconClass: 'fa fa-graduation-cap p-mr-2',
+    name: 'education',
     schemas: [
       {
         name: 'jobTitle',
@@ -421,6 +425,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Interests',
     iconClass: 'fa fa-paint-brush p-mr-2',
+    name: 'interests',
     schemas: [
       {
         fieldType: 'ChipsInput',
@@ -433,6 +438,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Skills',
     iconClass: 'fa fa-laptop p-mr-2',
+    name: 'skills',
     schemas: [
       {
         fieldType: 'TextInput',
@@ -460,6 +466,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Languages',
     iconClass: 'fa fa-globe p-mr-2',
+    name: 'languages',
     schemas: [
       {
         fieldType: 'TextInput',
@@ -488,6 +495,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Courses',
     iconClass: 'fa fa-file-text p-mr-2',
+    name: 'courses',
     schemas: [
       {
         name: 'jobTitle',
@@ -544,6 +552,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
   {
     title: 'Achievements',
     iconClass: 'fa fa-clock-o p-mr-2',
+    name: 'achievements',
     schemas: [
       {
         fieldType: 'EditorInput',
