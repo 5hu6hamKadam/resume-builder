@@ -31,6 +31,9 @@
     >
       {{ $t(`navLinks.${navItem.title}`) }}
     </router-link>
+    <div class="p-col-fixed">
+      <InputSwitch v-model="isDark" @change="onThemeChange(isDark)" />
+    </div>
     <div class="p-col-fixed locale-container">
       <Dropdown
         v-model="$i18n.locale"
@@ -175,9 +178,11 @@ import Avatar from 'primevue/avatar';
 import Rating from 'primevue/rating';
 import Sidebar from 'primevue/sidebar';
 import Dropdown from 'primevue/dropdown';
+import InputSwitch from 'primevue/inputswitch';
+
 export default {
   name: 'Home',
-  components: { Button, Card, Avatar, Rating, Sidebar, Dropdown },
+  components: { Button, Card, Avatar, Rating, Sidebar, Dropdown, InputSwitch },
   data() {
     return {
       APP_NAME,
@@ -192,7 +197,31 @@ export default {
         { name: 'French', value: 'fr' },
       ],
       locale: '',
+      isDark: false,
     };
+  },
+  methods: {
+    onThemeChange(event) {
+      this.$log.info('Home | entering with event', event);
+      let themeElement = document.getElementById('theme-link');
+      this.$log.info('themeElement', themeElement);
+      themeElement.setAttribute(
+        'href',
+        event
+          ? 'themes/md-dark-indigo/theme.css'
+          : 'themes/md-light-indigo/theme.css'
+      );
+    },
+    //   themeElement.setAttribute(
+    //     'href',
+    //     themeElement
+    //       .getAttribute('href')
+    //       .replace(
+    //         'themes/md-light-indigo/theme.css',
+    //         'themes/md-dark-indigo/theme.css'
+    //       )
+    //   );
+    // },
   },
 };
 </script>
