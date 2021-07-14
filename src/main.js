@@ -12,6 +12,8 @@ import 'primeflex/primeflex.css';
 import Button from 'primevue/button';
 import Tooltip from 'primevue/tooltip';
 import VueLogger from 'vuejs-logger';
+import i18n from './i18n';
+
 const isProduction = process.env.NODE_ENV === 'production';
 
 import 'primevue/resources/themes/md-light-indigo/theme.css';
@@ -25,7 +27,7 @@ const options = {
   separator: '|',
   showConsoleColors: true,
 };
-
+Vue.use(i18n);
 Vue.use(VueLogger, options);
 Vue.directive('tooltip', Tooltip);
 Vue.config.productionTip = false;
@@ -34,5 +36,6 @@ Vue.component('Button', Button);
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  i18n,
+  render: (h) => h(App)
 }).$mount('#app');

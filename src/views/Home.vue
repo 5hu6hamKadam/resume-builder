@@ -31,9 +31,18 @@
     >
       {{ navItem.title }}
     </router-link>
-
+    <div class="p-col-fixed locale-container">
+      <Dropdown
+        v-model="$i18n.locale"
+        :options="countries"
+        optionLabel="name"
+        optionValue="value"
+        selected="en"
+        class="p-p-1"
+      />
+    </div>
     <article class="p-col-12 p-text-center p-my-4">
-      <h1>Create your professional Resume with CV maker</h1>
+      <h1>{{ $t('heroTitle') }}</h1>
       <p>
         Create your very own professional Resume and download it within 15
         minutes.
@@ -166,10 +175,10 @@ import Card from 'primevue/card';
 import Avatar from 'primevue/avatar';
 import Rating from 'primevue/rating';
 import Sidebar from 'primevue/sidebar';
-
+import Dropdown from 'primevue/dropdown';
 export default {
   name: 'Home',
-  components: { Button, Card, Avatar, Rating, Sidebar },
+  components: { Button, Card, Avatar, Rating, Sidebar, Dropdown },
   data() {
     return {
       APP_NAME,
@@ -179,7 +188,22 @@ export default {
       COMPANY_LIST,
       FAQ_LIST,
       isSidebar: false,
+      countries: [
+        { name: 'English', value: 'en' },
+        { name: 'French', value: 'fr' },
+      ],
+      locale: '',
     };
   },
 };
 </script>
+<style lang="scss">
+.locale-container {
+  .p-dropdown-label {
+    padding: 0.2rem !important;
+  }
+  .p-dropdown-item {
+    padding: 0.5em !important;
+  }
+}
+</style>
