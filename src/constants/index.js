@@ -2,44 +2,41 @@ export const APP_NAME = 'CV Builder';
 
 export const NAV_LIST = [
   {
-    title: 'Resume Templates',
+    title: 'resumeTemplates',
     path: 'Home',
   },
   {
-    title: 'Resume Writing Service',
+    title: 'resumeWritingService',
     path: 'Home',
   },
   {
-    title: 'Pricing',
+    title: 'pricing',
     path: 'Home',
   },
   {
-    title: 'Contact',
+    title: 'contact',
     path: 'Home',
   },
   {
-    title: 'Log In',
+    title: 'login',
     path: 'Home',
   },
 ];
 export const FEATURE_LIST = [
   {
     icon: '/img/rating.svg',
-    title: 'Quick and easy resume builder',
-    description:
-      'With our online CV maker, it is simple for anyone to quickly create a professional resume. Enter your personal details and begin filling out your resume content. Finally, choose one of our 36 available resume layouts, and download your resume.',
+    title: 'feature1.title',
+    description: 'feature1.description',
   },
   {
     icon: '/img/profiles.svg',
-    title: 'More likely to land a job',
-    description:
-      'With a representative and professional resume, you will stand out amongst all other applicants. You are probably more likely to be invited to an interview with an professional Resume.',
+    title: 'feature2.title',
+    description: 'feature2.description',
   },
   {
     icon: '/img/recruitment.svg',
-    title: 'Organize your applications',
-    description:
-      'Often, it is important to be able to tailor your resume based on the job you wish to apply for. With CV maker, you can create and manage several different resumes in an organised way through your own personal account hub.',
+    title: 'feature3.title',
+    description: 'feature3.description',
   },
 ];
 
@@ -47,25 +44,22 @@ export const TESTIMONY_LIST = [
   {
     avatar: '/img/user-1.jpg',
     name: 'Dylan',
-    description:
-      'Undoubtedly, CVmaker was a great success for me. Within 15 minutes, I had created my resume and sent it with the email program.',
-    function: 'Management',
+    description: 'testimony1.description',
+    function: 'testimony1.function',
     rating: 5,
   },
   {
     avatar: '/img/user-2.jpg',
     name: 'Jay',
-    description:
-      'I received positive comments on my resume and found a great job very quickly. I certainly recommend CVmaker!',
-    function: 'HR Manager',
+    description: 'testimony2.description',
+    function: 'testimony2.function',
     rating: 5,
   },
   {
     avatar: '/img/user-3.jpg',
     name: 'Kate',
-    description:
-      'I find it very handy that I can organise all of my resumes and applications in one place with CVmaker. It holds such beautiful resume templates!',
-    function: 'Marketing',
+    description: 'testimony3.description',
+    function: 'testimony3.function',
     rating: 5,
   },
 ];

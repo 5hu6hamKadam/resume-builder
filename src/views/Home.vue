@@ -8,7 +8,7 @@
           :key="`navItem-${index}`"
           :to="{ name: navItem.path }"
         >
-          {{ navItem.title }}
+          {{ $t(`navLinks.${navItem.title}`) }}
         </router-link>
       </div>
     </Sidebar>
@@ -29,7 +29,7 @@
       :key="`navItem-${index}`"
       :to="{ name: navItem.path }"
     >
-      {{ navItem.title }}
+      {{ $t(`navLinks.${navItem.title}`) }}
     </router-link>
     <div class="p-col-fixed locale-container">
       <Dropdown
@@ -42,13 +42,12 @@
       />
     </div>
     <article class="p-col-12 p-text-center p-my-4">
-      <h1>{{ $t('heroTitle') }}</h1>
+      <h1>{{ $t('home.heroTitle') }}</h1>
       <p>
-        Create your very own professional Resume and download it within 15
-        minutes.
+        {{ $t('home.heroSubtitle') }}
       </p>
       <router-link :to="{ path: 'create' }">
-        <Button label="Create your resume" />
+        <Button :label="$t('home.heroBtn')" />
       </router-link>
     </article>
     <Card
@@ -67,15 +66,15 @@
             />
           </div>
           <div class="p-md-10 p-sm-12 p-mx-md-2">
-            <h2>{{ feature.title }}</h2>
-            <p>{{ feature.description }}</p>
+            <h2>{{ $t(`features.${feature.title}`) }}</h2>
+            <p>{{ $t(`features.${feature.description}`) }}</p>
           </div>
         </div>
       </template>
     </Card>
     <section class="p-col-12 p-text-center">
-      <h1>What do our users say about CVmaker?</h1>
-      <p>They all found their dream job, thanks to CVmaker:</p>
+      <h1>{{ $t('testimony.title') }}</h1>
+      <p>{{ $t('testimony.subtitle') }}</p>
     </section>
     <section class="p-col-12 p-md-8 p-offset-0 p-md-offset-2">
       <div class="p-grid p-jc-around">
@@ -105,12 +104,12 @@
                   />
                 </div>
                 <p class="p-col-12">
-                  {{ testimony.description }}
+                  {{ $t(`testimonyList.${testimony.description}`) }}
                 </p>
                 <div class="p-col-12">
                   <div class="p-d-flex p-ai-baseline">
                     <h3 class="p-mr-1">Function</h3>
-                    <p>{{ testimony.function }}</p>
+                    <p>{{ $t(`testimonyList.${testimony.function}`) }}</p>
                   </div>
                 </div>
               </div>
@@ -120,7 +119,7 @@
       </div>
     </section>
     <section class="p-col-12 p-md-8 p-offset-0 p-md-offset-2 p-text-center">
-      <p>Users of CVmaker are hired at top companies such as</p>
+      <p>{{ $t(`companyTitle`) }}</p>
       <div class="p-d-flex p-jc-center">
         <img
           v-for="(company, index) of COMPANY_LIST"
@@ -197,8 +196,8 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-.locale-container {
+<style lang="scss" scoped>
+::v-deep .locale-container {
   .p-dropdown-label {
     padding: 0.2rem !important;
   }

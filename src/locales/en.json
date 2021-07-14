@@ -1,3 +1,47 @@
 {
-  "heroTitle": "Create your professional Resume with CV maker"
+  "home": {
+    "heroTitle": "Create your professional Resume with CV maker",
+    "heroSubtitle": "Create your very own professional Resume and download it within 15 minutes.",
+    "heroBtn": "Create your resume"
+  },
+  "navLinks": {
+    "resumeTemplates": "Resume Templates",
+    "resumeWritingService": "Resume Writing Service",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Login"
+  },
+  "features": {
+    "feature1": {
+      "title": "Quick and easy resume builder",
+      "description": "With our online CV maker, it is simple for anyone to quickly create a professional resume. Enter your personal details and begin filling out your resume content. Finally, choose one of our 36 available resume layouts, and download your resume."
+    },
+    "feature2": {
+      "title": "More likely to land a job",
+      "description": "With a representative and professional resume, you will stand out amongst all other applicants. You are probably more likely to be invited to an interview with an professional Resume."
+    },
+    "feature3": {
+      "title": "Organize your applications",
+      "description": "Often, it is important to be able to tailor your resume based on the job you wish to apply for. With CV maker, you can create and manage several different resumes in an organised way through your own personal account hub."
+    }
+  },
+  "testimony": {
+    "title": "What do our users say about CVmaker?",
+    "subtitle": "They all found their dream job, thanks to CVmaker:"
+  },
+  "testimonyList": {
+    "testimony1": {
+      "description": "Undoubtedly, CVmaker was a great success for me. Within 15 minutes, I had created my resume and sent it with the email program.",
+      "function": "Management"
+    },
+    "testimony2": {
+      "description": "I received positive comments on my resume and found a great job very quickly. I certainly recommend CVmaker!",
+      "function": "HR Manager"
+    },
+    "testimony3": {
+      "description": "I find it very handy that I can organise all of my resumes and applications in one place with CVmaker. It holds such beautiful resume templates!",
+      "function": "Marketing"
+    }
+  },
+  "companyTitle": "Users of CVmaker are hired at top companies such as"
 }

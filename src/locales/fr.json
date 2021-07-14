@@ -1,3 +1,47 @@
 {
-  "heroTitle": "Créez votre CV professionnel avec CV maker"
+  "home": {
+    "heroTitle": "Créez votre CV professionnel avec CV maker",
+    "heroSubtitle": "Créez votre propre CV professionnel et téléchargez-le en 15 minutes.",
+    "heroBtn": "Créez votre CV"
+  },
+  "navLinks": {
+    "resumeTemplates": "Modèles de CV",
+    "resumeWritingService": "Service de rédaction de CV",
+    "pricing": "Prix",
+    "contact": "Contacter",
+    "login": "Connexion"
+  },
+  "features": {
+    "feature1": {
+      "title": "Générateur de CV simple et rapide",
+      "description": "Avec notre créateur de CV en ligne, il est simple pour quiconque de créer rapidement un CV professionnel. Entrez vos informations personnelles et commencez à remplir le contenu de votre CV. Enfin, choisissez l'une de nos 36 mises en page de CV disponibles et téléchargez votre CV."
+    },
+    "feature2": {
+      "title": "Plus de chances de décrocher un emploi",
+      "description": "Avec un CV représentatif et professionnel, vous vous démarquerez de tous les autres candidats. Vous êtes probablement plus susceptible d'être invité à un entretien avec un CV professionnel."
+    },
+    "feature3": {
+      "title": "Organisez vos candidatures",
+      "description": "Souvent, il est important de pouvoir adapter votre CV en fonction de l'emploi pour lequel vous souhaitez postuler. Avec CV maker, vous pouvez créer et gérer plusieurs CV différents de manière organisée via votre propre hub de compte personnel."
+    }
+  },
+  "testimony": {
+    "title": "Que disent nos utilisateurs de CVmaker ?",
+    "subtitle": "Ils ont tous trouvé le job de leurs rêves grâce à CVmaker :"
+  },
+  "testimonyList": {
+    "testimony1": {
+      "description": "Sans aucun doute, CVmaker a été un grand succès pour moi. En 15 minutes, j'avais créé mon CV et l'avais envoyé avec le programme de messagerie.",
+      "function": "La gestion"
+    },
+    "testimony2": {
+      "description": "J'ai reçu des commentaires positifs sur mon CV et j'ai trouvé un excellent travail très rapidement. Je recommande certainement CVmaker!",
+      "function": "responsable des ressources humaines"
+    },
+    "testimony3": {
+      "description": "Je trouve très pratique de pouvoir organiser tous mes CV et candidatures en un seul endroit avec CVmaker. Il contient de si beaux modèles de CV!",
+      "function": "Commercialisation"
+    }
+  },
+  "companyTitle": "Les utilisateurs de CVmaker sont embauchés dans des entreprises de premier plan telles que"
 }
