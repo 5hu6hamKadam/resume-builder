@@ -1,10 +1,30 @@
 <template>
   <div class="home p-grid p-ai-center p-px-md-6 p-px-3">
+    <Sidebar :visible.sync="isSidebar" :baseZIndex="1000">
+      <div class="p-grid">
+        <router-link
+          class="p-col-12"
+          v-for="(navItem, index) of NAV_LIST"
+          :key="`navItem-${index}`"
+          :to="{ name: navItem.path }"
+        >
+          {{ navItem.title }}
+        </router-link>
+      </div>
+    </Sidebar>
+
     <div class="p-col-fixed p-mr-auto">
-      <h3 class="cursor-pointer">{{ APP_NAME }}</h3>
+      <div class="p-d-flex p-ai-center">
+        <Button
+          icon="pi pi-bars"
+          @click="isSidebar = true"
+          class="p-button-rounded p-button-text p-d-block p-d-lg-none"
+        />
+        <h3 class="cursor-pointer">{{ APP_NAME }}</h3>
+      </div>
     </div>
     <router-link
-      class="p-col-fixed"
+      class="p-col-fixed p-d-lg-block p-d-none"
       v-for="(navItem, index) of NAV_LIST"
       :key="`navItem-${index}`"
       :to="{ name: navItem.path }"
@@ -145,10 +165,11 @@ import Button from 'primevue/button';
 import Card from 'primevue/card';
 import Avatar from 'primevue/avatar';
 import Rating from 'primevue/rating';
+import Sidebar from 'primevue/sidebar';
 
 export default {
   name: 'Home',
-  components: { Button, Card, Avatar, Rating },
+  components: { Button, Card, Avatar, Rating, Sidebar },
   data() {
     return {
       APP_NAME,
@@ -157,6 +178,7 @@ export default {
       TESTIMONY_LIST,
       COMPANY_LIST,
       FAQ_LIST,
+      isSidebar: false,
     };
   },
 };
