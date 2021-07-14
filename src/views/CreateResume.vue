@@ -8,7 +8,7 @@
     <section
       class="p-col-12 p-md-8 p-offset-0 p-lg-offset-2 p-lg-8 p-md-10 p-md-offset-1"
     >
-      <Steps :model="items" :readonly="false" class="p-mb-4" />
+      <Steps :model="items" :readonly="false" class="p-mb-4 steps-container" />
       <router-view
         v-slot="{ Component }"
         :formData="formObject"
@@ -74,3 +74,14 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.p-steps-item {
+  .p-menuitem-link {
+    display: flex;
+    flex-direction: column !important;
+    .p-steps-title {
+      padding-left: 0px !important;
+    }
+  }
+}
+</style>

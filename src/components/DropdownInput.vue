@@ -32,7 +32,7 @@ export default {
   },
   data() {
     return {
-      selectedData: this.selected || null,
+      selectedData: this.value || null,
     };
   },
   methods: {
