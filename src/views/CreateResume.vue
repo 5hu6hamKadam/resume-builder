@@ -1,5 +1,17 @@
 <template>
   <article class="create-resume-container p-grid p-px-md-6 p-px-3">
+    <Dialog
+      header="Header "
+      :visible.sync="isDialog"
+      :style="{ width: '50vw' }"
+    >
+      <p class="p-m-0">
+        {{ dialog.content }}
+      </p>
+      <template #footer>
+        <Button label="Ok" icon="pi pi-check" @click="clearDialog" autofocus />
+      </template>
+    </Dialog>
     <header class="p-col-12">
       <router-link :to="{ name: 'Home' }">
         <h3>{{ APP_NAME }}</h3></router-link
@@ -26,9 +38,29 @@
 <script>
 import { APP_NAME } from '@/constants';
 import Steps from 'primevue/steps';
-
+import Dialog from 'primevue/dialog';
+import { CLEAR_DIALOG } from '@/store/mutation.type.js';
+import { mapMutations, mapState } from 'vuex';
 export default {
-  components: { Steps },
+  components: { Steps, Dialog },
+  computed: {
+    ...mapState(['dialog']),
+    isDialog: {
+      get: function() {
+        this.$log.info(
+          'CreateResume | get isDialog with content as',
+          this.dialog.content
+        );
+        return this.dialog.content !== '';
+      },
+      set: function(val) {
+        this.$log.info('CreateResume | set isDialog with val', val);
+        if (!val) {
+          this.clearDialog();
+        }
+      },
+    },
+  },
   data() {
     return {
       APP_NAME,
@@ -71,6 +103,7 @@ export default {
           ' your order completed.',
       });
     },
+    ...mapMutations([CLEAR_DIALOG]),
   },
 };
 </script>
