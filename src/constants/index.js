@@ -245,11 +245,11 @@ const END_MONTH = [
   { label: 'December', value: 'December' },
 ];
 export const FORM_SCHEMA = [
-  {
-    fieldType: 'FileUploader',
-    name: 'fileUploader',
-    containerClass: 'p-col-12 p-mb-2',
-  },
+  // {
+  //   fieldType: 'FileUploader',
+  //   name: 'fileUploader',
+  //   containerClass: 'p-col-12 p-mb-2',
+  // },
   {
     fieldType: 'TextInput',
     label: 'First Name',
@@ -344,16 +344,28 @@ export const FORM_EXPERIENCE_SCHEMA = [
       },
       {
         fieldType: 'DropdownInput',
-        label: 'Start Date',
         name: 'startDate',
         options: YEAR_LIST,
-        value: '2021',
+        containerClass: 'p-col-6 p-as-end',
+      },
+      {
+        fieldType: 'DropdownInput',
+        label: 'End Date',
+        name: 'endDate',
+        options: END_MONTH,
+        placeholder: "Don't Show",
         containerClass: 'p-col-6',
+      },
+      {
+        fieldType: 'DropdownInput',
+        name: 'endDate',
+        options: YEAR_LIST,
+        containerClass: 'p-col-6 p-as-end',
       },
       {
         fieldType: 'EditorInput',
         label: 'Description',
-        name: 'WorkDescription',
+        name: 'workDescription',
         containerClass: 'p-col-12',
       },
     ],
@@ -364,7 +376,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
     name: 'education',
     schemas: [
       {
-        name: 'jobTitle',
+        name: 'degreeTitle',
         fieldType: 'TextInput',
         label: 'Degree',
         placeholder: 'e. g. Bachelor of Science',
@@ -417,7 +429,7 @@ export const FORM_EXPERIENCE_SCHEMA = [
       {
         fieldType: 'EditorInput',
         label: 'Description',
-        name: 'WorkDescription',
+        name: 'schoolDescription',
         containerClass: 'p-col-12',
       },
     ],
@@ -502,14 +514,14 @@ export const FORM_EXPERIENCE_SCHEMA = [
         fieldType: 'TextInput',
         label: 'Course',
         placeholder: 'e. g. Finance Manage',
-        containerClass: 'p-col-6',
+        containerClass: 'p-col-12 p-sm-6',
       },
       {
         name: 'courseInstitution',
         fieldType: 'TextInput',
         label: 'Institution',
         placeholder: 'e. g. New York Business School',
-        containerClass: 'p-col-6',
+        containerClass: 'p-col-12 p-sm-6',
       },
       {
         fieldType: 'DropdownInput',
@@ -517,14 +529,14 @@ export const FORM_EXPERIENCE_SCHEMA = [
         name: 'courseStartMonth',
         options: START_MONTH,
         placeholder: "Don't Show",
-        containerClass: 'p-col-3',
+        containerClass: 'p-col-12 p-sm-6 p-lg-3',
       },
       {
         fieldType: 'DropdownInput',
         name: 'courseStartYear',
         options: YEAR_LIST,
         value: '2021',
-        containerClass: 'p-col-3 p-as-end',
+        containerClass: 'p-col-12 p-sm-6 p-lg-3 p-as-end',
       },
       {
         fieldType: 'DropdownInput',
@@ -532,14 +544,14 @@ export const FORM_EXPERIENCE_SCHEMA = [
         options: END_MONTH,
         placeholder: "Don't Show",
         label: 'End Date',
-        containerClass: 'p-col-3',
+        containerClass: 'p-col-12 p-lg-3',
       },
       {
         fieldType: 'DropdownInput',
         name: 'courseStartYear',
         options: YEAR_LIST,
         value: '2021',
-        containerClass: 'p-col-3 p-as-end',
+        containerClass: 'p-col-12 p-lg-3 p-as-end',
       },
       {
         fieldType: 'EditorInput',
@@ -563,3 +575,5 @@ export const FORM_EXPERIENCE_SCHEMA = [
     ],
   },
 ];
+
+export const TEMPLATES = ['BasicTemplate'];
