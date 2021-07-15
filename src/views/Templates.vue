@@ -1,33 +1,41 @@
 <template>
   <div class="templates-container">
     <p>Templates</p>
-    <Button
-      v-for="(template, index) of TEMPLATES"
-      :key="`template-btn-${index}`"
-      :label="template"
-      @click="generateResume(index)"
-    />
+    <h1>Less is More</h1>
+    <p><strong>Price:</strong> &#8377;5.00</p>
+    <google-pay-button
+      environment="TEST"
+      :button-color="buttonColor"
+      :button-type="buttonType"
+      :button-size-mode="isCustomSize ? 'fill' : 'static'"
+      :paymentRequest.prop="paymentRequest"
+      @loadpaymentdata="onLoadPaymentData"
+      @error="onError"
+      :style="{ width: `${buttonWidth}px`, height: `${buttonHeight}px` }"
+    ></google-pay-button>
   </div>
 </template>
 <script>
-import { TEMPLATES } from '@/constants';
+import { TEMPLATES, PAY_BUTTON } from '@/constants';
 import pdfMake from 'pdfmake';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { mapState } from 'vuex';
+import '@google-pay/button-element';
+
 export default {
   name: 'Tamplates',
   components: {},
   data() {
     return {
       TEMPLATES,
+      ...PAY_BUTTON,
     };
   },
   computed: {
     ...mapState(['resume']),
   },
   methods: {
-    generateResume(index) {
-      this.$log.info('Templates | entering with index as', index);
+    generateResume() {
       const {
         personalDetails,
         resumeObjective,
@@ -225,6 +233,13 @@ export default {
       };
       this.$log.info('pdf', docDefinition);
       pdfMake.createPdf(docDefinition).open();
+    },
+    onLoadPaymentData(event) {
+      this.$log.info('load payment data', event.detail);
+      this.generateResume();
+    },
+    onError(event) {
+      this.$log.error('error', event.error);
     },
   },
 };

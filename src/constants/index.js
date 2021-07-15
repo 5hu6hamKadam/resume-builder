@@ -571,3 +571,44 @@ export const FORM_EXPERIENCE_SCHEMA = [
 ];
 
 export const TEMPLATES = ['BasicTemplate'];
+
+export const PAY_BUTTON = {
+  buttonColor: 'default',
+  buttonType: 'buy',
+  isCustomSize: false,
+  buttonWidth: 100,
+  buttonHeight: 40,
+  isTop: window === window.top,
+
+  paymentRequest: {
+    apiVersion: 2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: 'CARD',
+        parameters: {
+          allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+          allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD'],
+        },
+        tokenizationSpecification: {
+          type: 'PAYMENT_GATEWAY',
+          parameters: {
+            gateway: 'example',
+            gatewayMerchantId: 'exampleGatewayMerchantId',
+          },
+        },
+      },
+    ],
+    merchantInfo: {
+      merchantId: '12345678901234567890',
+      merchantName: 'Demo Merchant',
+    },
+    transactionInfo: {
+      totalPriceStatus: 'FINAL',
+      totalPriceLabel: 'Total',
+      totalPrice: '5.00',
+      currencyCode: 'INR',
+      countryCode: 'IN',
+    },
+  },
+};
