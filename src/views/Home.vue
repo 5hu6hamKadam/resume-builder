@@ -179,10 +179,21 @@ import Rating from 'primevue/rating';
 import Sidebar from 'primevue/sidebar';
 import Dropdown from 'primevue/dropdown';
 import InputSwitch from 'primevue/inputswitch';
-
+import { SET_THEME } from '@/store/mutation.type';
 export default {
   name: 'Home',
   components: { Button, Card, Avatar, Rating, Sidebar, Dropdown, InputSwitch },
+  computed: {
+    isDark: {
+      get() {
+        return this.$store.state.theme.isDark;
+      },
+      set(value) {
+        this.$log.info('setting isDark as', value);
+        this.$store.commit(SET_THEME, value);
+      },
+    },
+  },
   data() {
     return {
       APP_NAME,
@@ -197,8 +208,10 @@ export default {
         { name: 'French', value: 'fr' },
       ],
       locale: '',
-      isDark: false,
     };
+  },
+  created() {
+    this.onThemeChange(this.isDark);
   },
   methods: {
     onThemeChange(event) {
@@ -212,16 +225,6 @@ export default {
           : 'themes/md-light-indigo/theme.css'
       );
     },
-    //   themeElement.setAttribute(
-    //     'href',
-    //     themeElement
-    //       .getAttribute('href')
-    //       .replace(
-    //         'themes/md-light-indigo/theme.css',
-    //         'themes/md-dark-indigo/theme.css'
-    //       )
-    //   );
-    // },
   },
 };
 </script>
