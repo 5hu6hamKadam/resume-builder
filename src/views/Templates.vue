@@ -1,41 +1,46 @@
 <template>
   <div class="templates-container">
-    <p>Templates</p>
     <h1>Less is More</h1>
     <p><strong>Price:</strong> &#8377;5.00</p>
-    <google-pay-button
-      environment="TEST"
-      :button-color="buttonColor"
-      :button-type="buttonType"
-      :button-size-mode="isCustomSize ? 'fill' : 'static'"
-      :paymentRequest.prop="paymentRequest"
-      @loadpaymentdata="onLoadPaymentData"
-      @error="onError"
-      :style="{ width: `${buttonWidth}px`, height: `${buttonHeight}px` }"
-    ></google-pay-button>
+    <div class="p-d-flex p-ai-center">
+      <Button label="Try it!" class="p-mr-2" @click="generateResume(false)" />
+      <google-pay-button
+        environment="TEST"
+        :button-color="buttonColor"
+        :button-type="buttonType"
+        :button-size-mode="isCustomSize ? 'fill' : 'static'"
+        :paymentRequest.prop="paymentRequest"
+        @loadpaymentdata="onLoadPaymentData"
+        @error="onError"
+        :style="{ width: `${buttonWidth}px`, height: `${buttonHeight}px` }"
+      ></google-pay-button>
+    </div>
   </div>
 </template>
 <script>
-import { TEMPLATES, PAY_BUTTON } from '@/constants';
+import { TEMPLATES, PAY_BUTTON, APP_NAME } from '@/constants';
 import pdfMake from 'pdfmake';
 import htmlToPdfmake from 'html-to-pdfmake';
 import { mapState } from 'vuex';
 import '@google-pay/button-element';
-
+import Button from 'primevue/button';
 export default {
   name: 'Tamplates',
-  components: {},
+  components: {
+    Button,
+  },
   data() {
     return {
       TEMPLATES,
       ...PAY_BUTTON,
+      simpleTemplate: '',
     };
   },
   computed: {
     ...mapState(['resume']),
   },
   methods: {
-    generateResume() {
+    generateResume(isDownload) {
       const {
         personalDetails,
         resumeObjective,
@@ -47,7 +52,8 @@ export default {
       } = this.resume;
       const objective = htmlToPdfmake(resumeObjective.description);
 
-      const docDefinition = {
+      var docDefinition = {
+        ...(!isDownload && { watermark: APP_NAME }),
         content: [
           {
             text: `${personalDetails.firstName} ${personalDetails.lastName}`,
@@ -232,11 +238,12 @@ export default {
         },
       };
       this.$log.info('pdf', docDefinition);
-      pdfMake.createPdf(docDefinition).open();
+      const pdf = pdfMake.createPdf(docDefinition);
+      pdf.open();
     },
     onLoadPaymentData(event) {
       this.$log.info('load payment data', event.detail);
-      this.generateResume();
+      this.generateResume(true);
     },
     onError(event) {
       this.$log.error('error', event.error);
