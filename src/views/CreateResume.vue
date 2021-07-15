@@ -14,7 +14,9 @@
     </Dialog>
     <header class="p-col-12">
       <router-link :to="{ name: 'Home' }">
-        <h3>{{ APP_NAME }}</h3></router-link
+        <h3>
+          <em class="pi pi-angle-left p-mr-2"></em>{{ APP_NAME }}
+        </h3></router-link
       >
     </header>
     <section
