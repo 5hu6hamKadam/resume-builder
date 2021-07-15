@@ -78,7 +78,7 @@ export default {
         },
         {
           label: 'Template',
-          to: '/create/personal-details',
+          to: '/create/templates',
         },
       ],
     };

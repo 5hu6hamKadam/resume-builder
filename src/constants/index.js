@@ -98,40 +98,6 @@ export const TEXT_INPUT_PROPS = [
   'errorText',
 ];
 
-// export const FORM_SCHEMA = [
-//   {
-//     fieldType: 'TextInput',
-//     placeholder: 'First Name',
-//     label: 'First Name',
-//     name: 'firstName',
-//     errorText: 'This is error',
-//     containerClass: 'p-col-12',
-//   },
-//   {
-//     fieldType: 'EditorInput',
-//     label: 'Description',
-//     name: 'description',
-//     containerClass: 'p-col-12',
-//   },
-//   {
-//     fieldType: 'DropdownInput',
-//     label: 'Gender',
-//     name: 'gender',
-//     options: [
-//       { label: 'Male', value: 'Male' },
-//       { label: 'Female', value: 'Female' },
-//       { label: 'Other', value: 'Other' },
-//     ],
-//     placeholder: 'gender',
-//     containerClass: 'p-col-12',
-//   },
-//   {
-//     fieldType: 'ChipsInput',
-//     label: 'Hobbies',
-//     name: 'hobbies',
-//     containerClass: 'p-col-12',
-//   },
-// ];
 const START_MONTH = [
   { label: "Don't Show", value: "Don't Show" },
   { label: 'Show Year Only', value: 'Show Year Only' },

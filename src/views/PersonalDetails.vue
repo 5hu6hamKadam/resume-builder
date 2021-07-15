@@ -9,6 +9,9 @@
       >
         <FormBuilder :schema="FORM_SCHEMA" v-model="formData" />
       </AccordionWrapper>
+      <router-link to="/create/experiences">
+        <Button class="w-auto" label="Next" icon="pi pi-arrow-circle-right" />
+      </router-link>
     </div>
   </div>
 </template>

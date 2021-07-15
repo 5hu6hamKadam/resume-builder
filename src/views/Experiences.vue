@@ -16,6 +16,18 @@
           v-model="formData[formComp.name]"
         />
       </AccordionWrapper>
+      <div class="p-d-flex">
+        <router-link to="/create">
+          <Button
+            class="w-auto p-mr-1"
+            label="Back"
+            icon="pi pi-arrow-circle-left"
+          />
+        </router-link>
+        <router-link to="/create/templates">
+          <Button class="w-auto" label="Next" icon="pi pi-arrow-circle-right" />
+        </router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +38,7 @@ import { FORM_EXPERIENCE_SCHEMA } from '@/constants';
 import { SAVE_FORM, ADD_FORM } from '@/store/mutation.type.js';
 import { mapMutations } from 'vuex';
 export default {
+  name: 'Experiences',
   data() {
     this.$log.info('Experiences | resume state', this.$store.state.resume);
     return {

@@ -23,7 +23,7 @@ const routes = [
         component: () => import('@/views/Experiences.vue'),
       },
       {
-        path: '/create/personal-details',
+        path: '/create/templates',
         component: () => import('@/views/Templates.vue'),
       },
     ],
