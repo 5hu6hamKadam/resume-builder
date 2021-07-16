@@ -19,6 +19,8 @@
           icon="pi pi-bars"
           @click="isSidebar = true"
           class="p-button-rounded p-button-text p-d-block p-d-lg-none"
+          role="menubar"
+          aria-label="Menu Button"
         />
         <h3 class="cursor-pointer">{{ APP_NAME }}</h3>
       </div>
@@ -42,6 +44,8 @@
         optionValue="value"
         selected="en"
         class="p-p-1"
+        aria-label="languages"
+        role="combobox"
       />
     </div>
     <article class="p-col-12 p-text-center p-my-4">

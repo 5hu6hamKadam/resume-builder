@@ -31,6 +31,7 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'),
     url('../fonts/roboto-v20-latin-ext_latin-regular.woff2') format('woff2'),
@@ -41,6 +42,7 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
+  font-display: swap;
   font-weight: 500;
   src: local('Roboto Medium'), local('Roboto-Medium'),
     url('../fonts/roboto-v20-latin-ext_latin-500.woff2') format('woff2'),
@@ -51,6 +53,7 @@
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
+  font-display: swap;
   font-weight: 700;
   src: local('Roboto Bold'), local('Roboto-Bold'),
     url('../fonts/roboto-v20-latin-ext_latin-700.woff2') format('woff2'),
