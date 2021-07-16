@@ -1,6 +1,7 @@
 {
   "short_name": "Resume Builder",
   "name": "Resume Builder - Build free resume",
+  "scope": "/",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
