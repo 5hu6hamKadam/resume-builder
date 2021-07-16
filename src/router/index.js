@@ -28,6 +28,10 @@ const routes = [
       },
     ],
   },
+  {
+    path: '*',
+    component: () => import('@/components/NotFound.vue'),
+  },
 ];
 
 const router = new VueRouter({
