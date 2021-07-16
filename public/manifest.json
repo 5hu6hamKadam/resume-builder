@@ -1,0 +1,75 @@
+{
+  "short_name": "Resume Builder",
+  "name": "Resume Builder - Build free resume",
+  "icons": [
+    {
+      "src": "/img/icons/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/img/icons/android-chrome-maskable-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icons/android-chrome-maskable-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/img/icons/apple-touch-icon-60x60.png",
+      "type": "image/png",
+      "sizes": "60x60"
+    },
+    {
+      "src": "/img/icons/apple-touch-icon-76x76.png",
+      "type": "image/png",
+      "sizes": "76x76"
+    },
+    {
+      "src": "/img/icons/apple-touch-icon-120x120.png",
+      "type": "image/png",
+      "sizes": "120x120"
+    },
+    {
+      "src": "/img/icons/apple-touch-icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152"
+    },
+    {
+      "src": "/img/icons/apple-touch-icon-180x180.png",
+      "type": "image/png",
+      "sizes": "180x180"
+    }
+  ],
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "theme_color": "#3367D6",
+  "shortcuts": [
+    {
+      "name": "Home",
+      "short_name": "Home",
+      "description": "View home page",
+      "url": "/home",
+      "icons": [
+        { "src": "/img/icons/android-chrome-maskable.png", "sizes": "192x192" }
+      ]
+    },
+    {
+      "name": "Build your resume instantly",
+      "short_name": "Create Resume",
+      "description": "Build your resume instantly with our elegant and professional templates",
+      "url": "/create",
+      "icons": [
+        { "src": "/img/icons/android-chrome-maskable.png", "sizes": "192x192" }
+      ]
+    }
+  ],
+  "description": "Build your resume instantly for fresher and experienced."
+}

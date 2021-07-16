@@ -36,3 +36,9 @@ if (process.env.NODE_ENV === 'production') {
     },
   });
 }
+self.addEventListener('message', (event) => {
+  console.log('Getting new service worker installed');
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
