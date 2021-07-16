@@ -10,8 +10,10 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
+    "@google-pay/button-element": "^2.5.0",
     "core-js": "^3.6.5",
     "html-to-pdfmake": "^2.3.1",
+    "mitt": "^3.0.0",
     "pdfmake": "^0.2.0",
     "primeflex": "^2.0.0",
     "primeicons": "^4.1.0",

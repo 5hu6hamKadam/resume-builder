@@ -11,6 +11,7 @@ import Button from 'primevue/button';
 import Tooltip from 'primevue/tooltip';
 import VueLogger from 'vuejs-logger';
 import i18n from './i18n';
+import ConfirmationService from 'primevue/confirmationservice';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -26,6 +27,7 @@ const options = {
 Vue.use(i18n);
 Vue.use(VueLogger, options);
 Vue.directive('tooltip', Tooltip);
+Vue.use(ConfirmationService);
 Vue.config.productionTip = false;
 Vue.use(PrimeVue, { ripple: true });
 Vue.component('Button', Button);
