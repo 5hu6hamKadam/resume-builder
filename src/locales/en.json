@@ -44,8 +44,26 @@
     }
   },
   "companyTitle": "Users of CVmaker are hired at top companies such as",
+  "info": {
+    "title": "Increase your chances of a job considerably",
+    "description": "With CV maker, you can quickly and easily create a distinctive and professional resume within 15 minutes."
+  },
   "updatePrompt": {
     "description": "There is a newer version of app available please update it now.",
     "title": "New Update Available"
+  },
+  "faq": {
+    "title": "CV (Curriculum Vitae)",
+    "subtitle": "Information, Frequently Asked Questions, and Tips on Your resume.",
+    "list": {
+      "faq1": {
+        "question": "What is a CV or resume?",
+        "answer": "CV or resume is an abbreviation of the Latin words 'curriculum vitae', which mean 'life course'. A professional resume provides a summary and a good overview of someone's life.Your resume includes your education(s) and qualifications, work experience, skills, and important qualities. By means of your resume, your potential employer will be able to get a good picture of your skills, work experience, and knowledge quickly, to assess whether or not you fit the job, and therefore whether to offer you a job interview."
+      },
+      "faq2": {
+        "question": "What should I include in my curriculum vitae?",
+        "answer": "Your resume should only contain information relevant to your potential employer. So that means, what should be in your resume can differ per application. However, the bare minimum of details on your resume should at least include;"
+      }
+    }
   }
 }

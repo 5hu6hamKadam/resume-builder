@@ -139,18 +139,17 @@
       </div>
     </section>
     <section class="p-col-12 p-md-8 p-offset-0 p-md-offset-2 p-py-6">
-      <h1 class="p-mt-6">Increase your chances of a job considerably</h1>
+      <h1 class="p-mt-6">{{ $t('info.title') }}</h1>
       <p>
-        With CV maker, you can quickly and easily create a distinctive and
-        professional resume within 15 minutes.
+        {{ $t('info.description') }}
       </p>
       <router-link :to="{ path: 'create' }">
-        <Button class="p-mb-6" label="Create your Resume" />
+        <Button class="p-mb-6" :label="$t('home.heroBtn')" />
       </router-link>
     </section>
     <section class="p-col-12 p-md-8 p-offset-0 p-md-offset-2 p-py-6">
-      <h1>CV (Curriculum Vitae)</h1>
-      <p>Information, Frequently Asked Questions, and Tips on Your resume.</p>
+      <h1>{{ $t('faq.title') }}</h1>
+      <p>{{ $t('faq.subtitle') }}</p>
     </section>
     <section
       class="p-col-12 p-md-8 p-offset-0 p-md-offset-2 p-py-3"
@@ -159,8 +158,8 @@
     >
       <Card>
         <template #content>
-          <h1>{{ faq.question }}</h1>
-          <p>{{ faq.answer }}</p>
+          <h1>{{ $t(faq.question) }}</h1>
+          <p>{{ $t(faq.answer) }}</p>
         </template>
       </Card>
     </section>

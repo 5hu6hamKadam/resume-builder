@@ -44,8 +44,26 @@
     }
   },
   "companyTitle": "Les utilisateurs de CVmaker sont embauchés dans des entreprises de premier plan telles que",
+  "info": {
+    "title": "Augmentez considérablement vos chances d'obtenir un emploi",
+    "description": "Avec CV maker, vous pouvez créer rapidement et facilement un CV distinctif et professionnel en 15 minutes."
+  },
   "updatePrompt": {
     "description": "Une version plus récente de l'application est disponible, veuillez la mettre à jour maintenant.",
     "title": "Nouvelle mise à jour disponible"
+  },
+  "faq": {
+    "title": "CV (Curriculum Vitae)",
+    "subtitle": "Informations, questions fréquemment posées et conseils sur votre CV.",
+    "list": {
+      "faq1": {
+        "question": "Qu'est-ce qu'un CV ou un curriculum vitae?",
+        "answer": "CV ou curriculum vitae est une abréviation des mots latins 'curriculum vitae', qui signifient 'parcours de vie'. Un curriculum vitae professionnel fournit un résumé et un bon aperçu de la vie de quelqu'un. Votre curriculum vitae comprend vos études et qualifications, votre expérience de travail, vos compétences et vos qualités importantes. Grâce à votre curriculum vitae, votre employeur potentiel sera en mesure d'obtenir rapidement une bonne image de vos compétences, de votre expérience de travail et de vos connaissances, d'évaluer si vous correspondez ou non au poste, et donc de vous proposer un entretien d'embauche."
+      },
+      "faq2": {
+        "question": "Que dois-je inclure dans mon curriculum vitae?",
+        "answer": "Votre CV ne doit contenir que des informations pertinentes pour votre employeur potentiel. Cela signifie donc que ce qui doit figurer dans votre CV peut différer d'une candidature à l'autre. Cependant, le strict minimum de détails sur votre CV devrait au moins inclure ;"
+      }
+    }
   }
 }

@@ -72,19 +72,12 @@ export const COMPANY_LIST = [
 
 export const FAQ_LIST = [
   {
-    question: 'What is a CV or resume?',
-    answer:
-      "CV or resume is an abbreviation of the Latin words 'curriculum vitae', which mean 'life course'. A professional resume provides a summary and a good overview of someone's life.Your resume includes your education(s) and qualifications, work experience, skills, and important qualities. By means of your resume, your potential employer will be able to get a good picture of your skills, work experience, and knowledge quickly, to assess whether or not you fit the job, and therefore whether to offer you a job interview.",
+    question: 'faq.list.faq1.question',
+    answer: 'faq.list.faq1.answer',
   },
   {
-    question: 'What is a CV or resume?',
-    answer:
-      "CV or resume is an abbreviation of the Latin words 'curriculum vitae', which mean 'life course'. A professional resume provides a summary and a good overview of someone's life.Your resume includes your education(s) and qualifications, work experience, skills, and important qualities. By means of your resume, your potential employer will be able to get a good picture of your skills, work experience, and knowledge quickly, to assess whether or not you fit the job, and therefore whether to offer you a job interview.",
-  },
-  {
-    question: 'What should I include in my curriculum vitae?',
-    answer:
-      'Your resume should only contain information relevant to your potential employer. So that means, what should be in your resume can differ per application. However, the bare minimum of details on your resume should at least include;',
+    question: 'faq.list.faq2.question',
+    answer: 'faq.list.faq2.answer',
   },
 ];
 
