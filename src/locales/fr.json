@@ -43,5 +43,9 @@
       "function": "Commercialisation"
     }
   },
-  "companyTitle": "Les utilisateurs de CVmaker sont embauchés dans des entreprises de premier plan telles que"
+  "companyTitle": "Les utilisateurs de CVmaker sont embauchés dans des entreprises de premier plan telles que",
+  "updatePrompt": {
+    "description": "Une version plus récente de l'application est disponible, veuillez la mettre à jour maintenant.",
+    "title": "Nouvelle mise à jour disponible"
+  }
 }

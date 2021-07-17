@@ -43,5 +43,9 @@
       "function": "Marketing"
     }
   },
-  "companyTitle": "Users of CVmaker are hired at top companies such as"
+  "companyTitle": "Users of CVmaker are hired at top companies such as",
+  "updatePrompt": {
+    "description": "There is a newer version of app available please update it now.",
+    "title": "New Update Available"
+  }
 }

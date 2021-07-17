@@ -22,8 +22,8 @@ export default {
         this.registration = event.detail;
         this.updateExist = true;
         this.$confirm.require({
-          message: 'Are you sure you want to proceed further?',
-          header: 'Confirmation',
+          message: this.$t('updatePrompt.description'),
+          header: this.$t('updatePrompt.title'),
           icon: 'pi pi-exclamation-triangle',
           accept: this.refreshApp,
         });
